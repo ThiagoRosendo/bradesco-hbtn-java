@@ -13,7 +13,7 @@ public class Departamento {
     }
 
     public double getValorAtingidoMeta() {
-        return this.valorMeta;
+        return this.valorAtingidoMeta;
     }
 
     public boolean alcancouMeta() {
