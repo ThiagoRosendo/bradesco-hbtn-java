@@ -1,5 +1,3 @@
-package Classes_Objetos.encapsulamento;
-
 public class PersonagemGame {
     private String nome;
     private int saudeAtual;
@@ -13,10 +11,10 @@ public class PersonagemGame {
     }
 
     public String getNome() {
-        return nome;
+        return this.nome;
     }
 
     public int getSaudeAtual() {
-        return saudeAtual;
+        return this.saudeAtual;
     }
 }
