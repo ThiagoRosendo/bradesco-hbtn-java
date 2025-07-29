@@ -8,7 +8,7 @@ public class Gerente extends Empregado {
 
     @Override
     public double calcularSalarioTotal(Departamento departamento) {
-        return this.salarioFixo + calcularBonus(departamento);
+        return this.salarioFixo + this.calcularBonus(departamento);
     }
 
     @Override
@@ -18,7 +18,7 @@ public class Gerente extends Empregado {
             if (diferanca < 0){
                 diferanca = 0;
             }
-            return this.salarioFixo * 0.2 + diferanca * 0.01;
+            return (this.salarioFixo * 0.2) + (diferanca * 0.01);
         }
         return 0;
     }
