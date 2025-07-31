@@ -37,12 +37,12 @@ public class Pedido {
             
             System.out.printf("Tipo: %s  Titulo: %s  Preco: %.2f  Quant: %d  Total: %.2f\n", tipo, titulo, preco, quantidade, subtotal);
         }
-        System.out.println("---------------------------");
+        System.out.println("----------------------------");
         System.out.printf("DESCONTO: %.2f\n", totalProdutos * (percentualDesconto/100));
         System.out.printf("TOTAL PRODUTOS: %.2f\n", totalProdutos);
-        System.out.println("---------------------------");
+        System.out.println("----------------------------");
         System.out.printf("TOTAL PEDIDO: %.2f\n", calcularTotal());
-        System.out.println("---------------------------");
+        System.out.println("----------------------------");
         
     }
     
