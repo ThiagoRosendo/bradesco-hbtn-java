@@ -25,12 +25,16 @@ public class ArrayExercicio {
             soma += numeros[i];
         }
 
-        maiorNumero = Arrays.stream(numeros).max().getAsInt();
+        maiorNumero = numeros[0];
 
         // Exibindo os resultados
         System.out.println("Conteúdo do array:");
         for (int i : numeros) {
             System.out.printf("%d ", i);
+
+            if (i > maiorNumero) {
+                maiorNumero = i;1
+            }
         }
         System.out.println("");
         System.out.println("Soma de todos os numeros: " + soma);
