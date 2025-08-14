@@ -19,7 +19,8 @@ public class PessoasArray {
 
     public void pesquisaTempoConstante(int id) throws Exception{
         try {
-            System.out.printf("Nome pesquisado é %s que está na posição %d\n", getNomes()[id], id);
+            String pesquisa = getNomes()[id];
+            System.out.printf("Nome pesquisado é %s que está na posição %d\n", pesquisa, id);
         } catch (Exception e) {
             throw new Exception(String.format("O array de nomes possui :%d nomes", getNomes().length));
         }
