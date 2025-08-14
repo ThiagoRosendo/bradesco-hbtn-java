@@ -22,7 +22,7 @@ public class PessoasArray {
         int inicio = 0;
         int fim = nomes.length - 1;
 
-        System.out.printf("Procurando pelo nome: \"%s\"\n", nome);
+        System.out.printf("Procurando o nome: \"%s\"\n", nome);
 
         while (inicio <= fim && !encontrado) {
             int meio = inicio + (fim - inicio) / 2;
