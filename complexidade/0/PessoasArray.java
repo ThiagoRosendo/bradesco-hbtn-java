@@ -17,12 +17,16 @@ public class PessoasArray {
         this.nomes = nomes;
     }
 
+    
+    public String getNomePorId(int id) throws IndexOutOfBoundsException {
+        return nomes[id];
+    }
+
     public void pesquisaTempoConstante(int id) throws Exception{
         try {
-            String pesquisa = getNomes()[id];
-            System.out.printf("Nome pesquisado é %s que está na posição %d\n", pesquisa, id);
-        } catch (Exception e) {
-            throw new Exception(String.format("O array de nomes possui :%d nomes", getNomes().length));
+            System.out.printf("Nome pesquisado é %s que está na posição %d\n", getNomePorId(id), id);
+        } catch (IndexOutOfBoundsException e) {
+            throw new ArrayIndexOutOfBoundsException(String.format("O array de nomes possui :%d nomes", getNomes().length));
         }
 
     }
