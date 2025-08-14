@@ -20,7 +20,6 @@ public class PessoasArray {
     // implementar o método de buscaLinear
     public void buscaLinear(String nome){
         boolean encontrado = false;
-
         System.out.printf("Procurando pelo nome: \"%s\"\n", nome);
         for (int i = 0; i < nomes.length; i++) {
             System.out.println("Passando pelo indice:" + i);
@@ -29,7 +28,6 @@ public class PessoasArray {
                 System.out.printf("Nome pesquisado é %s que está na posição %d\n", nome, i);
             }
         }
-
         if (!encontrado) {
             throw new IllegalArgumentException(String.format("O nome %s não se encontra no array de nomes", nome));
         }
