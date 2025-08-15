@@ -20,7 +20,7 @@ public class ListaTodo {
     public boolean marcarTarefaFeita(int identificador) {
         for (int i = 0; i < tarefas.size(); i++) {
             if (tarefas.get(i).getIdentificador() == identificador) {
-                tarefas.get(i).setEstahfeita(true);
+                tarefas.get(i).setEstahFeita(true);
                 return true;
             }
         }
@@ -30,7 +30,7 @@ public class ListaTodo {
     public boolean desfazerTarefa(int identificador) {
         for (int i = 0; i < tarefas.size(); i++) {
             if (tarefas.get(i).getIdentificador() == identificador) {
-                tarefas.get(i).setEstahfeita(false);
+                tarefas.get(i).setEstahFeita(false);
                 return true;
             }
         }
@@ -39,13 +39,13 @@ public class ListaTodo {
 
     public void desfazerTodas() {
         for (int i = 0; i < tarefas.size(); i++) {
-            tarefas.get(i).setEstahfeita(false);
+            tarefas.get(i).setEstahFeita(false);
         }
     }
 
     public void fazerTodas() {
         for (int i = 0; i < tarefas.size(); i++) {
-            tarefas.get(i).setEstahfeita(true);
+            tarefas.get(i).setEstahFeita(true);
         }
     }
 

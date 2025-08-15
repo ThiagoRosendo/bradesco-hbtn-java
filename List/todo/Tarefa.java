@@ -1,6 +1,6 @@
 public class Tarefa {
     private String descricao;
-    private boolean estahfeita;
+    private boolean estahFeita;
     private int identificador;
 
     public Tarefa(String descricao, int identificador){
@@ -17,14 +17,14 @@ public class Tarefa {
     }
 
     public String getEstahFeita() {
-        if (estahfeita) {
+        if (estahFeita) {
             return "X";
         }
         return " ";
     }    
 
-    public void setEstahfeita(boolean estahfeita) {
-        this.estahfeita = estahfeita;
+    public void setEstahFeita(boolean estahfeita) {
+        this.estahFeita = estahfeita;
     }
 
     public void modificarDescircao(String descricao){
