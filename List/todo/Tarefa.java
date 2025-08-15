@@ -4,6 +4,9 @@ public class Tarefa {
     private int identificador;
 
     public Tarefa(String descricao, int identificador){
+        if (descricao.equals("") || descricao == null) {
+            throw new IllegalArgumentException("Descricao de tarefa invalida");
+        }
         this.descricao = descricao;
         this.identificador = identificador;
     }
