@@ -2,7 +2,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class Blog {
-    List<Post> postagens;
+    private List<Post> postagens;
     
     public Blog() {
         this.postagens = new ArrayList<Post>();
