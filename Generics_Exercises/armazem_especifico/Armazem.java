@@ -1,14 +1,14 @@
 import java.util.HashMap;
 import java.util.Map;
 
-public abstract class Armazem {
-    private Map<String, Object> inventario = new HashMap<>();
+public abstract class Armazem<T> implements Armazenavel<T> {
+    private Map<String, T> inventario = new HashMap<>();
 
-    public void adicionarAoInventario(String nome, Object valor) {
+    public void adicionarAoInventario(String nome, T valor) {
         inventario.put(nome, valor);
     }
 
-    public Object obterDoInventario(String nome) {
+    public T obterDoInventario(String nome) {
         return inventario.get(nome);
     }
 }

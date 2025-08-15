@@ -1,4 +1,4 @@
-public class ArmazemDeComida extends Armazem{
+public class ArmazemDeComida extends Armazem<Comida>{
 
         public void adicionarAoInventario(String nome, Comida comida) {
             super.adicionarAoInventario(nome, comida);
