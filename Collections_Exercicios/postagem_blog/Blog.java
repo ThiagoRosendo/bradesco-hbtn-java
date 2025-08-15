@@ -13,7 +13,7 @@ public class Blog {
                             .anyMatch(p -> p.toString().equals(novoPost.toString())
                             && p.getAutor().toString().equals(novoPost.getAutor().toString()));
         if (existe) {
-            throw new IllegalArgumentException("Postagem jah existe");
+            throw new IllegalArgumentException("Postagem jah existente");
         }
         postagens.add(novoPost);
     }
