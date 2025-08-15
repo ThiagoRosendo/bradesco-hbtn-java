@@ -2,24 +2,24 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class Blog {
-    List<Post> lista;
+    List<Post> postagens;
     
     public Blog() {
-        this.lista = new ArrayList<Post>();
+        this.postagens = new ArrayList<Post>();
     }
 
     public void adicionarPostagem(Post post) {
-        this.lista.add(post);
+        this.postagens.add(post);
     }
 
     public Set<String> obterTodosAutores(){
-        return lista.stream().map(Post::getAutor).collect(Collectors.toSet());
+        return postagens.stream().map(Post::getAutor).collect(Collectors.toSet());
     }
 
     public Map<String, Integer> obterContagemPorCategoria(){
         Map<String, Integer> contagem = new TreeMap<>();
 
-        for (Post post : lista){
+        for (Post post : postagens){
             String categoria = post.getCategoria();
             contagem.merge(categoria, 1, Integer::sum);
         }
