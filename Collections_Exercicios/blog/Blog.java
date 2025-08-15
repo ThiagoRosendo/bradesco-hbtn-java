@@ -13,7 +13,7 @@ public class Blog {
     }
 
     public Set<String> obterTodosAutores(){
-        return postagens.stream().map(Post::getAutor).collect(Collectors.toSet());
+        return postagens.stream().map(Post::getAutor).collect(Collectors.toCollection(TreeSet::new));
     }
 
     public Map<String, Integer> obterContagemPorCategoria(){
