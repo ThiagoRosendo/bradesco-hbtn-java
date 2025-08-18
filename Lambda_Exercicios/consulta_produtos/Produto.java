@@ -16,7 +16,7 @@ public class Produto {
 
     @Override
     public String toString(){
-        return String.format("%s %s %s %s %s", nome, preco, peso, quantidadeEmEstoque, tipo);
+        return String.format("%s %f %f %d %s", nome, preco, peso, quantidadeEmEstoque, tipo);
     }
 
     public String getNome() {
