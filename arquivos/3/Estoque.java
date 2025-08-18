@@ -6,7 +6,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 public class Estoque {
     private List<Produto> produtos;
@@ -51,6 +50,7 @@ public class Estoque {
     }
 
     public void exibirEstoque(){
+        carregarDoCSV();
         if (produtos.isEmpty()) {
             System.out.println("Estoque vazio.");
         } else {
