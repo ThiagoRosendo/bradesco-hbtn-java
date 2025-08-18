@@ -14,6 +14,7 @@ public class Estoque {
     public Estoque(String arquivo){
         this.arquivoCSV = arquivo;
         this.produtos = new ArrayList<Produto>();
+        carregarDoCSV();
     }
 
     public void adicionarProduto(String nome, int quantidade, double preco){
@@ -50,7 +51,6 @@ public class Estoque {
     }
 
     public void exibirEstoque(){
-        carregarDoCSV();
         if (produtos.isEmpty()) {
             System.out.println("Estoque vazio.");
         } else {
