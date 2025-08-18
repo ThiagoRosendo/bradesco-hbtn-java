@@ -44,7 +44,6 @@ public class Estoque {
 
         if (removido) {
             salvarNoCSV();
-            System.out.println("Produto removido com sucesso!");
         } else {
             System.out.println("Produto não encontrado.");
         }
