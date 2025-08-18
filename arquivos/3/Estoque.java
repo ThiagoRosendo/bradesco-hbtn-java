@@ -18,7 +18,7 @@ public class Estoque {
     }
 
     public void adicionarProduto(String nome, int quantidade, double preco){
-        Produto produto = new Produto(produtos.size() + 1, nome, quantidade, preco);
+        Produto produto = new Produto(produtos.get(produtos.size() -1).getId() + 1, nome, quantidade, preco);
         for (Produto item : produtos) {
             if (item.getId() == produto.getId()) {
                 throw new IllegalArgumentException("Já existe um produto com este ID.");
