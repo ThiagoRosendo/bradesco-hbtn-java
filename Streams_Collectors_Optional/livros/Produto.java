@@ -19,7 +19,7 @@ public class Produto {
     public String toString() {
         NumberFormat nf = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
 
-        return String.format("[%d] %s %s %s", codigo, nome, categoria, nf.format(preco));
+        return String.format("[%d] %s %s %s", codigo, nome, categoria, nf.format(preco).replace("\u00A0", " "));
     }
 
     public CategoriaProduto getCategoria() {
