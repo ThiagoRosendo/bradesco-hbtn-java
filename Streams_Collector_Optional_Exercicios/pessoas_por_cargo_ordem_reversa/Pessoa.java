@@ -28,6 +28,7 @@ public class Pessoa implements Comparable<Pessoa> {
 
     @Override
     public int compareTo(Pessoa pessoa) {
-        return Integer.compare(pessoa.codigo, this.codigo);
+        if (pessoa == null) return 1;
+        return this.nome.compareToIgnoreCase(pessoa.nome);
     }
 }
