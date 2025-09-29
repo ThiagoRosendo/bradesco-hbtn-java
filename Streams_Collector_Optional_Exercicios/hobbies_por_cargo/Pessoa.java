@@ -1,4 +1,5 @@
 import java.util.Locale;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Pessoa implements Comparable<Pessoa> {
@@ -16,7 +17,7 @@ public class Pessoa implements Comparable<Pessoa> {
         this.cargo = cargo;
         this.idade = idade;
         this.salario = salario;
-        this.hobbies = hobbies;
+        this.hobbies = hobbies != null ? new ArrayList<>(hobbies) : new ArrayList<>();
     }
 
     @Override
@@ -37,7 +38,7 @@ public class Pessoa implements Comparable<Pessoa> {
         return idade;
     }
 
-    public List<String> getHobbie() {
+    public List<String> getHobbies() {
         return hobbies;
     }
 
