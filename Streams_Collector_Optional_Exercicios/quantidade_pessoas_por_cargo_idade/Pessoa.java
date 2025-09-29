@@ -26,6 +26,14 @@ public class Pessoa implements Comparable<Pessoa> {
         return cargo;
     }
 
+    public double getSalario() {
+        return salario;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
     @Override
     public int compareTo(Pessoa pessoa) {
         return Integer.compare(this.codigo, pessoa.codigo);
