@@ -23,11 +23,11 @@ public class VerificacaoLogin {
 
     public static void realizarLogin(String usuario, String senha, String usuarioCorreto, String senhaCorreta) {
         if (!usuario.equals(usuarioCorreto)) {
-            log.error("Usuário desconhecido.");
+            logger.error("Usuário desconhecido.");
         } else if (usuario.equals(usuarioCorreto) && senha.equals(senhaCorreta)) {
-            log.info("Login efetuado com sucesso!");
+            logger.info("Login efetuado com sucesso!");
         } else if (usuario.equals(usuarioCorreto) && !senha.equals(senhaCorreta)){
-            log.warn("Senha incorreta!");
+            logger.warn("Senha incorreta!");
         }
     }
 }
