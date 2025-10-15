@@ -5,7 +5,7 @@ import domain.Pedido;
 import domain.Produto;
 import infrastructure.PedidoRepository;
 
-public class PedidoService implements PedidoRepository {
+public class PedidoService {
 
 
     private final PedidoRepository pedidoRepository;
@@ -18,7 +18,7 @@ public class PedidoService implements PedidoRepository {
 
     public Pedido criarPedido(Cliente cliente) {
         Pedido pedido = new Pedido(cliente);
-        this.pedidoRepository.salvar();
+        this.pedidoRepository.salvar(pedido);
         return pedido;
     }
 
