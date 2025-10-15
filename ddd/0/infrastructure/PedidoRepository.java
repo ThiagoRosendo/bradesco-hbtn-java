@@ -10,9 +10,7 @@ public class PedidoRepository {
     private final Map<String, Pedido> pedidos = new HashMap<>();
 
 
-    public void salvar(Pedido pedido) {
-        pedidos.put(pedido.getId(), pedido);
-    }
+    public void salvar(Pedido pedido) {}
 
 
     public Pedido buscarPorId(String id) {
