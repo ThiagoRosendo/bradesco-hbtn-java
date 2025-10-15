@@ -34,4 +34,9 @@ public class PedidoService implements PedidoRepository {
     public void cancelarPedido(String pedidoId) {
         this.pedidoRepository.buscarPorId(pedidoId).cancelar();
     }
+
+    @Override
+    public void salvar(Pedido pedido) {
+        this.pedidoRepository.pedidos.put(pedido.getId(), pedido);
+    }
 }
