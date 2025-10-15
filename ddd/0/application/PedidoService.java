@@ -17,7 +17,9 @@ public class PedidoService implements PedidoRepository {
 
 
     public Pedido criarPedido(Cliente cliente) {
-        return new Pedido(cliente);
+        Pedido pedido = new Pedido(cliente);
+        this.pedidoRepository.salvar();
+        return pedido;
     }
 
 
@@ -33,10 +35,5 @@ public class PedidoService implements PedidoRepository {
 
     public void cancelarPedido(String pedidoId) {
         this.pedidoRepository.buscarPorId(pedidoId).cancelar();
-    }
-
-    @Override
-    public void salvar(Pedido pedido) {
-        this.pedidoRepository.pedidos.put(pedido.getId(), pedido);
     }
 }
