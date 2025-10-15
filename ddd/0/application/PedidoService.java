@@ -5,7 +5,7 @@ import domain.Pedido;
 import domain.Produto;
 import infrastructure.PedidoRepository;
 
-public class PedidoService {
+public class PedidoService implements PedidoRepository {
 
 
     private final PedidoRepository pedidoRepository;
